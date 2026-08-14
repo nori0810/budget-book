@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFF5F7;
+    color: #49383B;
+}
+
+header {
+    background-color: #C86B82;
+    color: #FFFCF8;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.form {
+    background-color: #FFFCF8;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(200, 107, 130, 0.15);
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: #49383B;
+}
+
+.form-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-list label {
+    font-weight: bold;
+    color: #6B555A;
+}
+
+.form-input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #E8C8D0;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #FFF5F7;
+    color: #49383B;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #D98FA3;
+    box-shadow: 0 0 0 3px rgba(217, 143, 163, 0.18);
+}
+
+.form-list input[type="date"] {
+    cursor: pointer;
+}
+
+/* ボタン */
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.button-group .form-button,
+.delete-button {
+    flex: 1;
+    width: auto;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 追加ボタン */
+
+.form-button {
+    background-color: #D98FA3;
+    color: #FFFCF8;
+    transition: all 0.2s ease;
+}
+
+.form-button:hover {
+    background-color: #C97D93;
+    transform: translateY(-1px);
+}
+
+.form-button:active {
+    transform: translateY(0);
+}
+
+/* 削除ボタン */
+
+.delete-button {
+    background-color: #E8898F;
+    color: #FFFCF8;
+    transition: all 0.2s ease;
+}
+
+.delete-button:hover {
+    background-color: #D9757C;
+    transform: translateY(-1px);
+}
+
+.delete-button:active {
+    transform: translateY(0);
+}
+
+/* 家計簿一覧 */
+
+.history {
+    margin-top: 30px;
+}
+
+.expense-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #FFFCF8;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.expense-header:hover {
+    background-color: #FFF0F3;
+}
+
+.expense-details {
+    padding: 5px 15px;
+}
+
+.expense-details p {
+    margin: 8px 0;
+    padding: 8px;
+    color: #6B555A;
+}
+
+/* 収入 */
+
+.income {
+    color: #8FBEA8;
+}
+
+/* 支出 */
+
+.expense {
+    color: #E8898F;
+}
+
+/* 貯金・残高 */
+
+.saving {
+    color: #A99BC9;
+}
+
+/* グラフ補助 */
+
+.chart-accent {
+    color: #E8CC8A;
+}
+
+/* スマホ */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .form {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .button-group {
+        gap: 8px;
+    }
+
+    .button-group .form-button,
+    .delete-button {
+        padding: 12px;
+        font-size: 15px;
+    }
+}

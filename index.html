@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家計簿</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>家計簿</h1>
+    </header>
+
+    <main>
+
+        <section class="form">
+            <h2 class="title">使ったお金</h2>
+
+            <form class="info">
+
+                <div class="form-list">
+                    <label for="trade-type">ラベル</label>
+
+                    <select id="trade-type" class="form-input">
+                        <option value="food">食事</option>
+                        <option value="travel-cost">移動費</option>
+                        <option value="house-money">家賃</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+
+                <div class="form-list">
+                    <label for="details">内容</label>
+
+                    <input
+                        type="text"
+                        id="details"
+                        class="form-input"
+                        placeholder="詳細入力"
+                    >
+                </div>
+
+                <div class="form-list">
+                    <label for="amount">金額</label>
+
+                    <input
+                        type="number"
+                        id="amount"
+                        class="form-input"
+                        placeholder="金額を入力"
+                        min="0"
+                    >
+                </div>
+
+                <div class="form-list">
+                    <label for="date">日付</label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        class="form-input"
+                    >
+                </div>
+
+                <div class="button-group">
+                    <button
+                        class="form-button"
+                        type="submit"
+                    >
+                        追加
+                    </button>
+
+                    <button
+                        type="button"
+                        id="delete-mode"
+                        class="delete-button"
+                    >
+                        削除
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="history">
+            <h2 class="title">使ったお金一覧</h2>
+
+            <div id="money-list"></div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
